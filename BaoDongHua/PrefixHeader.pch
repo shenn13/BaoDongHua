@@ -1,0 +1,70 @@
+//
+//  PrefixHeader.pch
+//  BaoDongHua
+//
+//  Created by shen on 16/12/1.
+//  Copyright © 2016年 shen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+//屏幕的宽和高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+#import "UIImage+Extension.h"
+#import "UIImageView+WebCache.h"
+
+#import "JSONModel.h"
+#import "UIView+MJ.h"
+#import "BaoDongHuaTool.h"
+#import "AFNetworkingManager.h"
+
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "Masonry.h"
+
+//选集按钮未选中颜色
+#define SelectButtonColor [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1]
+//所有视图背景颜色
+#define ViewBackgroundColor [UIColor colorWithRed:246.0/255 green:246.0/255 blue:246.0/255 alpha:1];
+//tabbar
+#define TabbarBGColor [UIColor colorWithRed:0.0/255 green:153.0/255 blue:231.0/255 alpha:1]
+//navigationBar
+#define navigationBarBGColor [UIColor colorWithRed:0.0/255 green:153.0/255 blue:231.0/255 alpha:1]
+
+#define GDT_APP_ID @"1106020812"//REP_FLG_GDTID
+#define GDT_APP_KID @"6020821034191429"//REP_FLG_KID
+#define GDT_APP_CID @"3020023004798448"//REP_FLG_CID
+//友盟统计
+#define UM_APP_KEY @"58b9075f04e2054f0f000477"
+//AdMob APPID 原生广告ID 插屏广告ID  所有APP固定 三个ID
+#define AdMob_APP_ID @"ca-app-pub-5962260393902909~9079399671"
+#define AdMob_NativeExpressAdUnitID @"ca-app-pub-5962260393902909/4509599272"
+#define AdMob_CID @"ca-app-pub-5962260393902909/1556132878"
+
+//审核接口
+#define CheckOnLineUrl @"https://api.52kandianying.cn/index.html?method=typeinfos&id=109"
+//上线接口
+#define Homeurl @"https://api.52kandianying.cn/index.html?method=typeinfos&id=3"
+//屏蔽接口
+#define MarkUrl @"https://api.52kandianying.cn/index.html?method=mark&appid=3&id=59"
+//详情
+#define Detailurl @"https://api.52kandianying.cn/index.html?method=videoinfo&"
+//banner
+#define AlertURL @"http://api.52kandianying.cn:81/adurl.html?id=1"
+
+
+
+#endif /* PrefixHeader_pch */
